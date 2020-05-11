@@ -1,0 +1,24 @@
+" Isotope Theme - neovim color config {{{
+" {{ author }} ({{ githubOrg }}/neovim)
+scriptencoding utf8
+" }}}
+
+" Configuration : {{{
+if v:version > 580
+  highlight clear
+  if exists('syntax_on')
+    syntax reset
+  endif
+endif
+
+let g:colors_name = 'isotope'
+
+if !(has('termguicolors') && &termguilcolors) && !has('gui_running') && &t_Co != 256
+  finish
+endif
+" Palette: {{{2
+let s:
+" }}}22
+" }}}
+
+" vi:ft=vim
