@@ -2,11 +2,11 @@
 " File: isotope.vim 
 " Description: Colorful scheme for Vim
 " Author: Arden Rasmussen
-" Source: {{ githubOrg }}/neovim
+" Source: https://github.com/Isotope-Theme/neovim
 " -----------------------------------------------------------------------------
 
 " Supporting code -------------------------------------------------------------
-" Initalisation: {{{
+" Initalisation: \{\{\{
 if version > 580
   hi clear
   if exists("syntax_on")
@@ -18,7 +18,7 @@ if !(has('termguicolors') && &termguicolors) && !has('gui_running') && &t_Co != 
   finish
 endif
 " }}}
-" Global Settings: {{{
+" Global Settings: \{\{\{
 if !exists('g:isotope_bold')
   let g:isotope_bold=1
 endif
@@ -62,81 +62,81 @@ endif
 let s:is_dark=(&background == 'dark')
 
 " }}}
-" Palette: {{{
+" Palette: \{\{\{
 let g:isotope#palette = {}
 
-let g:isotope#palette.dark0       = ['{{ hex dark0 }}',       {{ ansi256 dark0 }}]
-let g:isotope#palette.dark1       = ['{{ hex dark1 }}',       {{ ansi256 dark1 }}]
-let g:isotope#palette.dark2       = ['{{ hex dark2 }}',       {{ ansi256 dark2 }}]
-let g:isotope#palette.dark3       = ['{{ hex dark3 }}',       {{ ansi256 dark3 }}]
-let g:isotope#palette.dark4       = ['{{ hex dark4 }}',       {{ ansi256 dark4 }}]
-let g:isotope#palette.dark5       = ['{{ hex dark5 }}',       {{ ansi256 dark5 }}]
-let g:isotope#palette.dark6       = ['{{ hex dark6 }}',       {{ ansi256 dark6 }}]
-let g:isotope#palette.dark7       = ['{{ hex dark7 }}',       {{ ansi256 dark7 }}]
+let g:isotope#palette.dark0       = ['#263238',       59]
+let g:isotope#palette.dark1       = ['#313D43',       59]
+let g:isotope#palette.dark2       = ['#3D484E',       60]
+let g:isotope#palette.dark3       = ['#495459',       66]
+let g:isotope#palette.dark4       = ['#555F65',       102]
+let g:isotope#palette.dark5       = ['#626B71',       102]
+let g:isotope#palette.dark6       = ['#6F787D',       102]
+let g:isotope#palette.dark7       = ['#7C8489',       109]
 
-let g:isotope#palette.light0       = ['{{ hex light0 }}',       {{ ansi256 light0 }}]
-let g:isotope#palette.light1       = ['{{ hex light1 }}',       {{ ansi256 light1 }}]
-let g:isotope#palette.light2       = ['{{ hex light2 }}',       {{ ansi256 light2 }}]
-let g:isotope#palette.light3       = ['{{ hex light3 }}',       {{ ansi256 light3 }}]
-let g:isotope#palette.light4       = ['{{ hex light4 }}',       {{ ansi256 light4 }}]
-let g:isotope#palette.light5       = ['{{ hex light5 }}',       {{ ansi256 light5 }}]
-let g:isotope#palette.light6       = ['{{ hex light6 }}',       {{ ansi256 light6 }}]
-let g:isotope#palette.light7       = ['{{ hex light7 }}',       {{ ansi256 light7 }}]
+let g:isotope#palette.light0       = ['#899195',       145]
+let g:isotope#palette.light1       = ['#979EA2',       145]
+let g:isotope#palette.light2       = ['#A4ABAF',       145]
+let g:isotope#palette.light3       = ['#B2B8BC',       152]
+let g:isotope#palette.light4       = ['#C1C6C9',       188]
+let g:isotope#palette.light5       = ['#CFD3D6',       188]
+let g:isotope#palette.light6       = ['#DDE1E3',       188]
+let g:isotope#palette.light7       = ['#ECEFF1',       231]
 
-let g:isotope#palette.red0        = ['{{ hex red0 }}',        {{ ansi256 red0 }}]
-let g:isotope#palette.red1        = ['{{ hex red1 }}',        {{ ansi256 red1 }}]
-let g:isotope#palette.red2        = ['{{ hex red2 }}',        {{ ansi256 red2 }}]
-let g:isotope#palette.pink0       = ['{{ hex pink0 }}',       {{ ansi256 pink0 }}]
-let g:isotope#palette.pink1       = ['{{ hex pink1 }}',       {{ ansi256 pink1 }}]
-let g:isotope#palette.pink2       = ['{{ hex pink2 }}',       {{ ansi256 pink2 }}]
-let g:isotope#palette.purple0     = ['{{ hex purple0 }}',     {{ ansi256 purple0 }}]
-let g:isotope#palette.purple1     = ['{{ hex purple1 }}',     {{ ansi256 purple1 }}]
-let g:isotope#palette.purple2     = ['{{ hex purple2 }}',     {{ ansi256 purple2 }}]
-let g:isotope#palette.deepPurple0 = ['{{ hex deepPurple0 }}', {{ ansi256 deepPurple0 }}]
-let g:isotope#palette.deepPurple1 = ['{{ hex deepPurple1 }}', {{ ansi256 deepPurple1 }}]
-let g:isotope#palette.deepPurple2 = ['{{ hex deepPurple2 }}', {{ ansi256 deepPurple2 }}]
-let g:isotope#palette.indigo0     = ['{{ hex indigo0 }}',     {{ ansi256 indigo0 }}]
-let g:isotope#palette.indigo1     = ['{{ hex indigo1 }}',     {{ ansi256 indigo1 }}]
-let g:isotope#palette.indigo2     = ['{{ hex indigo2 }}',     {{ ansi256 indigo2 }}]
-let g:isotope#palette.blue0       = ['{{ hex blue0 }}',       {{ ansi256 blue0 }}]
-let g:isotope#palette.blue1       = ['{{ hex blue1 }}',       {{ ansi256 blue1 }}]
-let g:isotope#palette.blue2       = ['{{ hex blue2 }}',       {{ ansi256 blue2 }}]
-let g:isotope#palette.lightBlue0  = ['{{ hex lightBlue0 }}',  {{ ansi256 lightBlue0 }}]
-let g:isotope#palette.lightBlue1  = ['{{ hex lightBlue1 }}',  {{ ansi256 lightBlue1 }}]
-let g:isotope#palette.lightBlue2  = ['{{ hex lightBlue2 }}',  {{ ansi256 lightBlue2 }}]
-let g:isotope#palette.cyan0       = ['{{ hex cyan0 }}',       {{ ansi256 cyan0 }}]
-let g:isotope#palette.cyan1       = ['{{ hex cyan1 }}',       {{ ansi256 cyan1 }}]
-let g:isotope#palette.cyan2       = ['{{ hex cyan2 }}',       {{ ansi256 cyan2 }}]
-let g:isotope#palette.teal0       = ['{{ hex teal0 }}',       {{ ansi256 teal0 }}]
-let g:isotope#palette.teal1       = ['{{ hex teal1 }}',       {{ ansi256 teal1 }}]
-let g:isotope#palette.teal2       = ['{{ hex teal2 }}',       {{ ansi256 teal2 }}]
-let g:isotope#palette.green0      = ['{{ hex green0 }}',      {{ ansi256 green0 }}]
-let g:isotope#palette.green1      = ['{{ hex green1 }}',      {{ ansi256 green1 }}]
-let g:isotope#palette.green2      = ['{{ hex green2 }}',      {{ ansi256 green2 }}]
-let g:isotope#palette.lightGreen0 = ['{{ hex lightGreen0 }}', {{ ansi256 lightGreen0 }}]
-let g:isotope#palette.lightGreen1 = ['{{ hex lightGreen1 }}', {{ ansi256 lightGreen1 }}]
-let g:isotope#palette.lightGreen2 = ['{{ hex lightGreen2 }}', {{ ansi256 lightGreen2 }}]
-let g:isotope#palette.lime0       = ['{{ hex lime0 }}',       {{ ansi256 lime0 }}]
-let g:isotope#palette.lime1       = ['{{ hex lime1 }}',       {{ ansi256 lime1 }}]
-let g:isotope#palette.lime2       = ['{{ hex lime2 }}',       {{ ansi256 lime2 }}]
-let g:isotope#palette.yellow0     = ['{{ hex yellow0 }}',     {{ ansi256 yellow0 }}]
-let g:isotope#palette.yellow1     = ['{{ hex yellow1 }}',     {{ ansi256 yellow1 }}]
-let g:isotope#palette.yellow2     = ['{{ hex yellow2 }}',     {{ ansi256 yellow2 }}]
-let g:isotope#palette.amber0      = ['{{ hex amber0 }}',      {{ ansi256 amber0 }}]
-let g:isotope#palette.amber1      = ['{{ hex amber1 }}',      {{ ansi256 amber1 }}]
-let g:isotope#palette.amber2      = ['{{ hex amber2 }}',      {{ ansi256 amber2 }}]
-let g:isotope#palette.orange0     = ['{{ hex orange0 }}',     {{ ansi256 orange0 }}]
-let g:isotope#palette.orange1     = ['{{ hex orange1 }}',     {{ ansi256 orange1 }}]
-let g:isotope#palette.orange2     = ['{{ hex orange2 }}',     {{ ansi256 orange2 }}]
-let g:isotope#palette.deepOrange0 = ['{{ hex deepOrange0 }}', {{ ansi256 deepOrange0 }}]
-let g:isotope#palette.deepOrange1 = ['{{ hex deepOrange1 }}', {{ ansi256 deepOrange1 }}]
-let g:isotope#palette.deepOrange2 = ['{{ hex deepOrange2 }}', {{ ansi256 deepOrange2 }}]
-let g:isotope#palette.brown0      = ['{{ hex brown0 }}',      {{ ansi256 brown0 }}]
-let g:isotope#palette.brown1      = ['{{ hex brown1 }}',      {{ ansi256 brown1 }}]
-let g:isotope#palette.brown2      = ['{{ hex brown2 }}',      {{ ansi256 brown2 }}]
+let g:isotope#palette.red0        = ['#BA000D',        160]
+let g:isotope#palette.red1        = ['#F44336',        203]
+let g:isotope#palette.red2        = ['#FF7961',        210]
+let g:isotope#palette.pink0       = ['#B0003A',       125]
+let g:isotope#palette.pink1       = ['#E91E63',       204]
+let g:isotope#palette.pink2       = ['#FF6090',       211]
+let g:isotope#palette.purple0     = ['#6A0080',     91]
+let g:isotope#palette.purple1     = ['#9C27B0',     133]
+let g:isotope#palette.purple2     = ['#D05CE3',     176]
+let g:isotope#palette.deepPurple0 = ['#320B86', 55]
+let g:isotope#palette.deepPurple1 = ['#673AB7', 98]
+let g:isotope#palette.deepPurple2 = ['#9A67EA', 141]
+let g:isotope#palette.indigo0     = ['#002984',     25]
+let g:isotope#palette.indigo1     = ['#3F51B5',     68]
+let g:isotope#palette.indigo2     = ['#757DE8',     105]
+let g:isotope#palette.blue0       = ['#0069C0',       32]
+let g:isotope#palette.blue1       = ['#2196F3',       75]
+let g:isotope#palette.blue2       = ['#6EC6FF',       117]
+let g:isotope#palette.lightBlue0  = ['#007AC1',  32]
+let g:isotope#palette.lightBlue1  = ['#03A9F4',  39]
+let g:isotope#palette.lightBlue2  = ['#67DAFF',  117]
+let g:isotope#palette.cyan0       = ['#008BA3',       37]
+let g:isotope#palette.cyan1       = ['#00BCD4',       44]
+let g:isotope#palette.cyan2       = ['#62EFFF',       123]
+let g:isotope#palette.teal0       = ['#00675B',       30]
+let g:isotope#palette.teal1       = ['#009688',       37]
+let g:isotope#palette.teal2       = ['#52C7B8',       116]
+let g:isotope#palette.green0      = ['#087F23',      29]
+let g:isotope#palette.green1      = ['#4CAF50',      72]
+let g:isotope#palette.green2      = ['#80E27E',      150]
+let g:isotope#palette.lightGreen0 = ['#5A9216', 106]
+let g:isotope#palette.lightGreen1 = ['#8BC34A', 149]
+let g:isotope#palette.lightGreen2 = ['#BEF67A', 192]
+let g:isotope#palette.lime0       = ['#99AA00',       142]
+let g:isotope#palette.lime1       = ['#CDDC39',       185]
+let g:isotope#palette.lime2       = ['#FFFF6E',       228]
+let g:isotope#palette.yellow0     = ['#C8B900',     184]
+let g:isotope#palette.yellow1     = ['#FFEB3B',     227]
+let g:isotope#palette.yellow2     = ['#FFFF72',     228]
+let g:isotope#palette.amber0      = ['#C79100',      178]
+let g:isotope#palette.amber1      = ['#FFC107',      220]
+let g:isotope#palette.amber2      = ['#FFF350',      228]
+let g:isotope#palette.orange0     = ['#C66900',     172]
+let g:isotope#palette.orange1     = ['#FF9800',     214]
+let g:isotope#palette.orange2     = ['#FFC947',     221]
+let g:isotope#palette.deepOrange0 = ['#C41C00', 166]
+let g:isotope#palette.deepOrange1 = ['#FF5722', 209]
+let g:isotope#palette.deepOrange2 = ['#FF8A50', 216]
+let g:isotope#palette.brown0      = ['#4B2C20',      59]
+let g:isotope#palette.brown1      = ['#795548',      101]
+let g:isotope#palette.brown2      = ['#A98274',      144]
 
 " }}}
-" Setup Emphasis: {{{
+" Setup Emphasis: \{\{\{
 let s:bold = 'bold,'
 if g:isotope_bold == 0
   let s:bold = ''
@@ -158,22 +158,22 @@ if g:isotope_inverse == 0
   let s:inverse = ''
 endif
 " }}}
-" Setup Colors: {{{
+" Setup Colors: \{\{\{
 let s:vim_bg = ['bg', 'bg']
 let s:vim_fg = ['fg', 'fg']
 let s:none = ['NONE', 'NONE']
 
 if s:is_dark
-  let s:bg0 = g:isotope#palette.dark1
+  let s:bg0 = g:isotope#palette.dark0
   if g:isotope_contrast_dark == 'soft'
-    let s:bg0 = g:isotope#palette.dark2
+    let s:bg0 = g:isotope#palette.dark0
   elseif g:isotope_contrast_dark == 'hard'
     let s:bg0 = g:isotope#palette.dark0
   endif
-  let s:bg1 = g:isotope#palette.dark3
-  let s:bg2 = g:isotope#palette.dark4
-  let s:bg3 = g:isotope#palette.dark5
-  let s:bg4 = g:isotope#palette.dark6
+  let s:bg1 = g:isotope#palette.dark1
+  let s:bg2 = g:isotope#palette.dark2
+  let s:bg3 = g:isotope#palette.dark3
+  let s:bg4 = g:isotope#palette.dark4
 
   let s:gray = g:isotope#palette.dark7
 
@@ -298,7 +298,7 @@ let g:isotope#palette.orange     = s:orange
 let g:isotope#palette.deepOrange = s:deepOrange
 let g:isotope#palette.brown      = s:brown
 " }}}
-" Setup Terminal Colors for Neovim: {{{
+" Setup Terminal Colors for Neovim: \{\{\{
 if has('nvim')
   let g:terminal_color_0  = g:isotope#palette.bg0[0]
   let g:terminal_color_8  = g:isotope#palette.gray[0]
@@ -325,17 +325,17 @@ if has('nvim')
   let g:terminal_color_15 = g:isotope#palette.fg1[0]
 endif
 " }}}
-" Overlaod Settings: {{{
+" Overlaod Settings: \{\{\{
 let s:hls_cursor = s:orange
 if exists('g:isotope_hls_cursor')
   let s:hls_cursor = g:isotope_hls_cursor
 endif
-let s:number_column = s:none
+let s:number_column = s:bg1
 if exists('g:isotope_number_column')
   let s:number_column = g:isotope_number_column
 endif
 
-let s:sign_column = s:bg1
+let s:sign_column = s:bg2
 if exists('g:gitgutter_override_sign_column_highligh') && g:gitgutter_override_sign_column_highlight == 1
   let s:sign_column = s:number_column
 else
@@ -358,10 +358,10 @@ if exists('g:isotope_invert_signs')
     let s:invert_signs = s:inverse
   endif
 endif
-let s:invert_selection = s:inverse
+let s:invert_selection = ''
 if exists('g:isotope_invert_selection')
-  if g:isotope_invert_selection == 0
-    let s:invert_selection = ''
+  if g:isotope_invert_selection == 1
+    let s:invert_selection = s:inverse
   endif
 endif
 let s:invert_tabline = ''
@@ -384,7 +384,7 @@ if exists('g:isotope_italicize_strings')
 endif
 
 " }}}
-" Highlighting Function: {{{
+" Highlighting Function: \{\{\{
 function! s:HL(group, fg, ...)
   " Arguments: group, guifg, guibg, gui, guisp
 
@@ -418,7 +418,7 @@ function! s:HL(group, fg, ...)
   execute join(histring, ' ')
 endfunction
 " }}}
-" Isotope HI Groups: {{{
+" Isotope HI Groups: \{\{\{
 call s:HL('IsotopeFg0',  s:fg0)
 call s:HL('IsotopeFg1',  s:fg1)
 call s:HL('IsotopeFg2',  s:fg2)
@@ -486,9 +486,10 @@ call s:HL('IsotopeBrownSign',      s:brown,      s:sign_column, s:invert_signs)
 " }}} 
 
 " Vanilla colorscheme ---------------------------------------------------------
-" General UI: {{{
+" General UI: \{\{\{
 
 " Normal text
+call s:HL('Inherit', '', '')
 call s:HL('Normal', s:fg1, s:bg0)
 
 if s:is_dark
@@ -522,31 +523,31 @@ if version >= 703
   call s:HL('Conceal', s:blue, s:none)
 
   " Line number of CursorLine
-  call s:HL('CursorLineNr', s:yellow, s:bg1)
+  call s:HL('CursorLineNr', s:blue, s:bg1, s:bold)
 endif
 
 hi! link NonText IsotopeBg2
 hi! link SpecialKey IsotopeBg2
 
-call s:HL('Visual',    s:none,  s:bg3, s:invert_selection)
+call s:HL('Visual',    s:none,  s:bg2, s:invert_selection)
 hi! link VisualNOS Visual
 
-call s:HL('Search',    s:yellow, s:bg0, s:inverse)
+call s:HL('Search',    s:yellow, s:bg2, s:inverse)
 call s:HL('IncSearch', s:hls_cursor, s:bg0, s:inverse)
 
-call s:HL('Underlined', s:blue, s:none, s:underline)
+call s:HL('Underlined', s:lightBlue, s:none, s:underline)
 
 call s:HL('StatusLine',   s:bg2, s:fg1, s:inverse)
 call s:HL('StatusLineNC', s:bg1, s:fg4, s:inverse)
 
 " The column separating vertically split windows
-call s:HL('VertSplit', s:bg3, s:vert_split)
+call s:HL('VertSplit', s:bg2, s:vert_split)
 
 " Current match in wildmenu completion
 call s:HL('WildMenu', s:blue, s:bg2, s:bold)
 
 " Directory names, special names in listing
-hi! link Directory IsotopeGreenBold
+hi! link Directory IsotopeBlue
 
 " Titles for output from :set all, :autocmd, etc.
 hi! link Title IsotopeGreenBold
@@ -554,30 +555,30 @@ hi! link Title IsotopeGreenBold
 " Error messages on the command line
 call s:HL('ErrorMsg',   s:bg0, s:red, s:bold)
 " More prompt: -- More --
-hi! link MoreMsg IsotopeYellowBold
+hi! link MoreMsg IsotopeAmberBold
 " Current mode message: -- INSERT --
-hi! link ModeMsg IsotopeYellowBold
+hi! link ModeMsg IsotopeAmberBold
 " 'Press enter' prompt and yes/no questions
 hi! link Question IsotopeOrangeBold
 " Warning messages
 hi! link WarningMsg IsotopeRedBold
 
 " }}}
-" Gutter: {{{
+" Gutter: \{\{\{
 
 " Line number for :number and :# commands
-call s:HL('LineNr', s:bg4, s:number_column)
+call s:HL('LineNr', s:bg3, s:number_column)
 
 " Column where signs are displayed
-call s:HL('SignColumn', s:none, s:sign_column)
+call s:HL('SignColumn', s:bg3, s:sign_column)
 
 " Line used for closed folds
 call s:HL('Folded', s:gray, s:bg1, s:italic)
 " Column where folds are displayed
-call s:HL('FoldColumn', s:gray, s:bg1)
+call s:HL('FoldColumn', s:gray, s:bg1, s:italic)
 
 " }}}
-" Cursor: {{{
+" Cursor: \{\{\{
 
 " Character under cursor
 call s:HL('Cursor', s:none, s:none, s:inverse)
@@ -589,77 +590,77 @@ hi! link iCursor Cursor
 hi! link lCursor Cursor
 
 " }}}
-" Syntax Highlighting: {{{
+" Syntax Highlighting: \{\{\{
 
 if g:isotope_improved_strings == 0
-  hi! link Special IsotopeOrange
+  hi! link Special IsotopeCyan
 else
-  call s:HL('Special', s:orange, s:bg1, s:italicize_strings)
+  call s:HL('Special', s:cyan, s:bg1, s:italicize_strings)
 endif
 
-call s:HL('Comment', s:gray, s:none, s:italicize_comments)
-call s:HL('Todo', s:vim_fg, s:vim_bg, s:bold . s:italic)
-call s:HL('Error', s:red, s:vim_bg, s:bold . s:inverse)
+call s:HL('Comment', s:bg4, s:none, s:italicize_comments)
+call s:HL('Todo', s:amber, s:bg1, s:bold . s:italic)
+call s:HL('Error', s:red, s:bg1, s:bold . s:inverse)
 
 " Generic statement
 hi! link Statement IsotopeRed
 " if, then, else, endif, swicth, etc.
-hi! link Conditional IsotopeRed
+hi! link Conditional IsotopePurple
 " for, do, while, etc.
-hi! link Repeat IsotopeRed
+hi! link Repeat IsotopeYellow
 " case, default, etc.
-hi! link Label IsotopeRed
+hi! link Label IsotopeAmber
 " try, catch, throw
 hi! link Exception IsotopeRed
 " sizeof, "+", "*", etc.
-hi! link Operator Normal
+hi! link Operator Inherit
 " Any other keyword
-hi! link Keyword IsotopeRed
+hi! link Keyword IsotopePurple
 
 " Variable name
-hi! link Identifier IsotopeBlue
+hi! link Identifier IsotopeRed
 " Function name
-hi! link Function IsotopeGreenBold
+hi! link Function IsotopeBlue
 
 " Generic preprocessor
-hi! link PreProc IsotopeCyan
+hi! link PreProc IsotopeAmber
 " Preprocessor #include
-hi! link Include IsotopeCyan
+hi! link Include IsotopeBlue
 " Preprocessor #define
-hi! link Define IsotopeCyan
+hi! link Define IsotopePurple
 " Same as Define
-hi! link Macro IsotopeCyan
+hi! link Macro IsotopeRed
 " Preprocessor #if, #else, #endif, etc.
-hi! link PreCondit IsotopeCyan
+hi! link PreCondit IsotopePurple
 
 " Generic constant
-hi! link Constant IsotopePurple
+hi! link Constant IsotopeOrange
 " Character constant: 'c', '/n'
-hi! link Character IsotopePurple
+hi! link Character IsotopeOrange
 " String constant: "this is a string"
 if g:isotope_improved_strings == 0
-  call s:HL('String',  s:green, s:none, s:italicize_strings)
+  call s:HL('String',  s:green, '', s:italicize_strings)
 else
-  call s:HL('String',  s:fg1, s:bg1, s:italicize_strings)
+  call s:HL('String',  s:green, '', s:italicize_strings)
 endif
 " Boolean constant: TRUE, false
-hi! link Boolean IsotopePurple
+hi! link Boolean IsotopeOrange
 " Number constant: 234, 0xff
-hi! link Number IsotopePurple
+hi! link Number IsotopeOrange
 " Floating point constant: 2.3e10
-hi! link Float IsotopePurple
+hi! link Float IsotopeOrange
 
 " Generic type
-hi! link Type IsotopeYellow
+hi! link Type IsotopeAmber
 " static, register, volatile, etc
-hi! link StorageClass IsotopeOrange
+hi! link StorageClass IsotopeAmber
 " struct, union, enum, etc.
-hi! link Structure IsotopeCyan
+hi! link Structure IsotopePurple
 " typedef
 hi! link Typedef IsotopeYellow
 
 " }}}
-" Completion Menu: {{{
+" Completion Menu: \{\{\{
 
 if version >= 700
   " Popup menu: normal item
@@ -673,7 +674,7 @@ if version >= 700
 endif
 
 " }}}
-" Diffs: {{{
+" Diffs: \{\{\{
 
 call s:HL('DiffDelete', s:red, s:bg0, s:inverse)
 call s:HL('DiffAdd',    s:green, s:bg0, s:inverse)
@@ -685,7 +686,7 @@ call s:HL('DiffChange', s:cyan, s:bg0, s:inverse)
 call s:HL('DiffText',   s:yellow, s:bg0, s:inverse)
 
 " }}}
-" Spelling: {{{
+" Spelling: \{\{\{
 
 if has("spell")
   " Not capitalised word, or compile warnings
@@ -705,19 +706,19 @@ endif
 " }}}
 
 " Plugin specific -------------------------------------------------------------
-" EasyMotion: {{{
+" EasyMotion: \{\{\{
 
 hi! link EasyMotionTarget Search
 hi! link EasyMotionShade Comment
 
 " }}}
-" Sneak: {{{
+" Sneak: \{\{\{
 
 hi! link Sneak Search
 hi! link SneakLabel Search
 
 " }}}
-" Indent Guides: {{{
+" Indent Guides: \{\{\{
 
 if !exists('g:indent_guides_auto_colors')
   let g:indent_guides_auto_colors = 0
@@ -734,7 +735,7 @@ if g:indent_guides_auto_colors == 0
 endif
 
 " }}}
-" IndentLine: {{{
+" IndentLine: \{\{\{
 
 if !exists('g:indentLine_color_term')
   let g:indentLine_color_term = s:bg2[1]
@@ -744,7 +745,7 @@ if !exists('g:indentLine_color_gui')
 endif
 
 " }}}
-" Rainbow Parentheses: {{{
+" Rainbow Parentheses: \{\{\{
 
 if !exists('g:rbpt_colorpairs')
   let g:rbpt_colorpairs =
@@ -771,7 +772,7 @@ let g:niji_dark_colours = g:rbpt_colorpairs
 let g:niji_light_colours = g:rbpt_colorpairs
 
 "}}}
-" GitGutter: {{{
+" GitGutter: \{\{\{
 
 hi! link GitGutterAdd IsotopeGreenSign
 hi! link GitGutterChange IsotopeCyanSign
@@ -779,20 +780,20 @@ hi! link GitGutterDelete IsotopeRedSign
 hi! link GitGutterChangeDelete IsotopeCyanSign
 
 " }}}
-" GitCommit: "{{{
+" GitCommit: "\{\{\{
 
 hi! link gitcommitSelectedFile IsotopeGreen
 hi! link gitcommitDiscardedFile IsotopeRed
 
 " }}}
-" Signify: {{{
+" Signify: \{\{\{
 
 hi! link SignifySignAdd IsotopeGreenSign
 hi! link SignifySignChange IsotopeCyanSign
 hi! link SignifySignDelete IsotopeRedSign
 
 " }}}
-" Syntastic: {{{
+" Syntastic: \{\{\{
 
 call s:HL('SyntasticError', s:none, s:none, s:undercurl, s:red)
 call s:HL('SyntasticWarning', s:none, s:none, s:undercurl, s:yellow)
@@ -801,12 +802,12 @@ hi! link SyntasticErrorSign IsotopeRedSign
 hi! link SyntasticWarningSign IsotopeYellowSign
 
 " }}}
-" Signature: {{{
+" Signature: \{\{\{
 hi! link SignatureMarkText   IsotopeBlueSign
 hi! link SignatureMarkerText IsotopePurpleSign
 
 " }}}
-" ShowMarks: {{{
+" ShowMarks: \{\{\{
 
 hi! link ShowMarksHLl IsotopeBlueSign
 hi! link ShowMarksHLu IsotopeBlueSign
@@ -814,7 +815,7 @@ hi! link ShowMarksHLo IsotopeBlueSign
 hi! link ShowMarksHLm IsotopeBlueSign
 
 " }}}
-" CtrlP: {{{
+" CtrlP: \{\{\{
 
 hi! link CtrlPMatch IsotopeYellow
 hi! link CtrlPNoEntries IsotopeRed
@@ -827,7 +828,7 @@ call s:HL('CtrlPMode2', s:bg0, s:blue, s:bold)
 call s:HL('CtrlPStats', s:fg4, s:bg2, s:bold)
 
 " }}}
-" Startify: {{{
+" Startify: \{\{\{
 
 hi! link StartifyBracket IsotopeFg3
 hi! link StartifyFile IsotopeFg1
@@ -840,7 +841,7 @@ hi! link StartifyHeader IsotopeOrange
 hi! link StartifyFooter IsotopeBg2
 
 " }}}
-" Vimshell: {{{
+" Vimshell: \{\{\{
 
 let g:vimshell_escape_colors = [
   \ s:bg4[0], s:red[0], s:green[0], s:yellow[0],
@@ -850,7 +851,7 @@ let g:vimshell_escape_colors = [
   \ ]
 
 " }}}
-" BufTabLine: {{{
+" BufTabLine: \{\{\{
 
 call s:HL('BufTabLineCurrent', s:bg0, s:fg4)
 call s:HL('BufTabLineActive', s:fg4, s:bg2)
@@ -858,7 +859,7 @@ call s:HL('BufTabLineHidden', s:bg4, s:bg1)
 call s:HL('BufTabLineFill', s:bg0, s:bg0)
 
 " }}}
-" Asynchronous Lint Engine: {{{
+" Asynchronous Lint Engine: \{\{\{
 
 call s:HL('ALEError', s:none, s:none, s:undercurl, s:red)
 call s:HL('ALEWarning', s:none, s:none, s:undercurl, s:yellow)
@@ -869,13 +870,13 @@ hi! link ALEWarningSign IsotopeYellowSign
 hi! link ALEInfoSign IsotopeBlueSign
 
 " }}}
-" Dirvish: {{{
+" Dirvish: \{\{\{
 
 hi! link DirvishPathTail IsotopeCyan
 hi! link DirvishArg IsotopeYellow
 
 " }}}
-" Netrw: {{{
+" Netrw: \{\{\{
 
 hi! link netrwDir IsotopeCyan
 hi! link netrwClassify IsotopeCyan
@@ -889,7 +890,7 @@ hi! link netrwCmdSep IsotopeFg3
 hi! link netrwVersion IsotopeGreen
 
 " }}}
-" NERDTree: {{{
+" NERDTree: \{\{\{
 
 hi! link NERDTreeDir IsotopeCyan
 hi! link NERDTreeDirSlash IsotopeCyan
@@ -908,13 +909,13 @@ hi! link NERDTreeToggleOn IsotopeGreen
 hi! link NERDTreeToggleOff IsotopeRed
 
 " }}}
-" Vim Multiple Cursors: {{{
+" Vim Multiple Cursors: \{\{\{
 
 call s:HL('multiple_cursors_cursor', s:none, s:none, s:inverse)
 call s:HL('multiple_cursors_visual', s:none, s:bg2)
 
 " }}}
-" coc.nvim: {{{
+" coc.nvim: \{\{\{
 
 hi! link CocErrorSign IsotopeRedSign
 hi! link CocWarningSign IsotopeOrangeSign
@@ -940,7 +941,7 @@ call s:HL('CocHintHighlight', s:none, s:none, s:undercurl, s:blue)
 " }}}
 
 " Filetype specific -----------------------------------------------------------
-" Diff: {{{
+" Diff: \{\{\{
 
 hi! link diffAdded IsotopeGreen
 hi! link diffRemoved IsotopeRed
@@ -952,7 +953,7 @@ hi! link diffNewFile IsotopeYellow
 hi! link diffLine IsotopeBlue
 
 " }}}
-" Html: {{{
+" Html: \{\{\{
 
 hi! link htmlTag IsotopeBlue
 hi! link htmlEndTag IsotopeBlue
@@ -978,7 +979,7 @@ call s:HL('htmlUnderlineItalic', s:vim_fg, s:vim_bg, s:underline . s:italic)
 call s:HL('htmlItalic', s:vim_fg, s:vim_bg, s:italic)
 
 " }}}
-" Xml: {{{
+" Xml: \{\{\{
 
 hi! link xmlTag IsotopeBlue
 hi! link xmlEndTag IsotopeBlue
@@ -1002,7 +1003,7 @@ hi! link xmlAttribPunct IsotopeGray
 hi! link xmlEntity IsotopeOrange
 hi! link xmlEntityPunct IsotopeOrange
 " }}}
-" Vim: {{{
+" Vim: \{\{\{
 
 call s:HL('vimCommentTitle', s:fg5, s:none, s:bold . s:italicize_comments)
 
@@ -1015,7 +1016,7 @@ hi! link vimSep IsotopeFg3
 hi! link vimContinue IsotopeFg3
 
 " }}}
-" Clojure: {{{
+" Clojure: \{\{\{
 
 hi! link clojureKeyword IsotopeBlue
 hi! link clojureCond IsotopeOrange
@@ -1045,13 +1046,13 @@ hi! link clojureQuote IsotopeYellow
 hi! link clojureUnquote IsotopeYellow
 
 " }}}
-" C: {{{
+" C: \{\{\{
 
 hi! link cOperator IsotopePurple
 hi! link cStructure IsotopeOrange
 
 " }}}
-" Python: {{{
+" Python: \{\{\{
 
 hi! link pythonBuiltin IsotopeOrange
 hi! link pythonBuiltinObj IsotopeOrange
@@ -1072,7 +1073,7 @@ hi! link pythonRepeat IsotopeRed
 hi! link pythonDottedName IsotopeGreenBold
 
 " }}}
-" CSS: {{{
+" CSS: \{\{\{
 
 hi! link cssBraces IsotopeBlue
 hi! link cssFunctionName IsotopeYellow
@@ -1107,7 +1108,7 @@ hi! link cssColorProp IsotopeCyan
 hi! link cssGeneratedContentProp IsotopeCyan
 
 " }}}
-" JavaScript: {{{
+" JavaScript: \{\{\{
 
 hi! link javaScriptBraces IsotopeFg1
 hi! link javaScriptFunction IsotopeCyan
@@ -1118,7 +1119,7 @@ hi! link javaScriptNull IsotopePurple
 hi! link javaScriptParens IsotopeFg3
 
 " }}}
-" YAJS: {{{
+" YAJS: \{\{\{
 
 hi! link javascriptImport IsotopeCyan
 hi! link javascriptExport IsotopeCyan
@@ -1199,7 +1200,7 @@ hi! link javascriptAsyncFuncKeyword IsotopeRed
 hi! link javascriptAwaitFuncKeyword IsotopeRed
 
 " }}}
-" PanglossJS: {{{
+" PanglossJS: \{\{\{
 
 hi! link jsClassKeyword IsotopeCyan
 hi! link jsExtendsKeyword IsotopeCyan
@@ -1215,7 +1216,7 @@ hi! link jsUndefined IsotopePurple
 hi! link jsClassDefinition IsotopeYellow
 
 " }}}
-" TypeScript: {{{
+" TypeScript: \{\{\{
 
 hi! link typeScriptReserved IsotopeCyan
 hi! link typeScriptLabel IsotopeCyan
@@ -1237,7 +1238,7 @@ hi! link typeScriptNull IsotopePurple
 hi! link typeScriptInterpolationDelimiter IsotopeCyan
 
 " }}}
-" PureScript: {{{
+" PureScript: \{\{\{
 
 hi! link purescriptModuleKeyword IsotopeCyan
 hi! link purescriptModuleName IsotopeFg1
@@ -1257,7 +1258,7 @@ hi! link purescriptConditional IsotopeOrange
 hi! link purescriptBacktick IsotopeOrange
 
 " }}}
-" CoffeeScript: {{{
+" CoffeeScript: \{\{\{
 
 hi! link coffeeExtendedOp IsotopeFg3
 hi! link coffeeSpecialOp IsotopeFg3
@@ -1266,19 +1267,19 @@ hi! link coffeeParen IsotopeFg3
 hi! link coffeeBracket IsotopeOrange
 
 " }}}
-" Ruby: {{{
+" Ruby: \{\{\{
 
 hi! link rubyStringDelimiter IsotopeGreen
 hi! link rubyInterpolationDelimiter IsotopeCyan
 
 " }}}
-" ObjectiveC: {{{
+" ObjectiveC: \{\{\{
 
 hi! link objcTypeModifier IsotopeRed
 hi! link objcDirective IsotopeBlue
 
 " }}}
-" Go: {{{
+" Go: \{\{\{
 
 hi! link goDirective IsotopeCyan
 hi! link goConstants IsotopePurple
@@ -1287,14 +1288,14 @@ hi! link goDeclType IsotopeBlue
 hi! link goBuiltins IsotopeOrange
 
 " }}}
-" Lua: {{{
+" Lua: \{\{\{
 
 hi! link luaIn IsotopeRed
 hi! link luaFunction IsotopeCyan
 hi! link luaTable IsotopeOrange
 
 " }}}
-" MoonScript: {{{
+" MoonScript: \{\{\{
 
 hi! link moonSpecialOp IsotopeFg3
 hi! link moonExtendedOp IsotopeFg3
@@ -1302,7 +1303,7 @@ hi! link moonFunction IsotopeFg3
 hi! link moonObject IsotopeYellow
 
 " }}}
-" Java: {{{
+" Java: \{\{\{
 
 hi! link javaAnnotation IsotopeBlue
 hi! link javaDocTags IsotopeCyan
@@ -1318,7 +1319,7 @@ hi! link javaOperator IsotopeOrange
 hi! link javaVarArg IsotopeGreen
 
 " }}}
-" Elixir: {{{
+" Elixir: \{\{\{
 
 hi! link elixirDocString Comment
 
@@ -1328,7 +1329,7 @@ hi! link elixirInterpolationDelimiter IsotopeCyan
 hi! link elixirModuleDeclaration IsotopeYellow
 
 " }}}
-" Scala: {{{
+" Scala: \{\{\{
 
 " NB: scala vim syntax file is kinda horrible
 hi! link scalaNameDefinition IsotopeFg1
@@ -1349,7 +1350,7 @@ hi! link scalaInstanceDeclaration IsotopeFg1
 hi! link scalaInterpolation IsotopeCyan
 
 " }}}
-" Markdown: {{{
+" Markdown: \{\{\{
 
 call s:HL('markdownItalic', s:fg3, s:none, s:italic)
 
@@ -1382,7 +1383,7 @@ call s:HL('markdownLinkText', s:gray, s:none, s:underline)
 hi! link markdownIdDeclaration markdownLinkText
 
 " }}}
-" Haskell: {{{
+" Haskell: \{\{\{
 
 " hi! link haskellType IsotopeYellow
 " hi! link haskellOperators IsotopeOrange
@@ -1416,7 +1417,7 @@ hi! link haskellString IsotopeGreen
 hi! link haskellChar IsotopeGreen
 
 " }}}
-" Json: {{{
+" Json: \{\{\{
 
 hi! link jsonKeyword IsotopeGreen
 hi! link jsonQuote IsotopeGreen
@@ -1427,7 +1428,7 @@ hi! link jsonString IsotopeFg1
 
 
 " Functions -------------------------------------------------------------------
-" Search Highlighting Cursor {{{
+" Search Highlighting Cursor \{\{\{
 
 function! IsotopeHlsShowCursor()
   call s:HL('Cursor', s:bg0, s:hls_cursor)
